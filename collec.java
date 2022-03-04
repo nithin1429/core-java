@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,6 +36,20 @@ class Employee {
         this.lastName = lastName;
     }
 
+    public boolean isEqual(Employee other) {
+
+        if (this == other)
+            return true;
+        if(other==null)
+            return false;
+        if(getClass()!=other.getClass())
+        return false;
+        Employee o=(Employee)other;
+        if(employeeId!=o.employeeId)
+        return false;
+        return true;
+    }
+
     @Override
     public String toString() {
         return "Employee [employeeId=" + employeeId + ", firstName=" + firstName + ", lastName=" + lastName + "]";
@@ -44,16 +57,18 @@ class Employee {
 
 }
 
-public class Main {
+public class collec {
     public static void main(String[] args) {
         Employee e1 = new Employee(501, "Nithin", "Kumar");
-        Employee e2 = new Employee(101, "rahul", "p");
-        Employee e3 = new Employee(101, "Jaya", "Krishna");
+        Employee e2 = new Employee(501, "Nithin", "P");
+        Employee e3 = new Employee(503, "Jaya", "krishna");
+
         List<Employee> employees = new ArrayList<>();
         employees.add(e1);
         employees.add(e2);
         employees.add(e3);
         employees.forEach(System.out::println);
+        System.out.println(e1.isEqual(e2));
 
     }
 
