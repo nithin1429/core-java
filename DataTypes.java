@@ -1,12 +1,12 @@
 public class DataTypes {
-        int a;
-        byte b;
-        short c;
-        long d;
-        float e;
-        double f;
-        char g;
-        boolean bool;
+       static int a;
+       static byte b;
+       static short c;
+       static long d;
+       static float e;
+       static double f;
+       static char g;
+       static boolean bool;
     void type1(){
         System.out.println("int"+a);
         System.out.println("byte"+b);
