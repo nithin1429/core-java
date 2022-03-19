@@ -9,6 +9,7 @@ class Person{
 }
 public class PersonBuilder {
     private static Person buildPerson(int id,String name){
+        System.out.println("id"+ id+", name:"+name);
         return new Person(id,name);
 
     }
